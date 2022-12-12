@@ -1,0 +1,12 @@
+
+<div>{{ message }}</div>
+<form>
+
+   
+<input type="text"  [(ngModel)]="student.studentName" name="studentName" ><br/>
+<input type="text" [(ngModel)]="student.fatherName" name="fatherName"><br/>
+<input type="text" [(ngModel)]="student.studentClass" name="studentClass"><br/>
+<input type="text" [(ngModel)]="student.address" name="address"><br/>
+<input type="text" [(ngModel)]="student.mobile" name="mobile"><br/>
+<input type="submit" class="btn btn-success" name="submit_reg" value="Add student" (click)=" registerNow()"/>
+</form>

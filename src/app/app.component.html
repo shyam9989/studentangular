@@ -1,0 +1,36 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>home</mat-icon>
+  </button>
+  <span>Student</span>
+  <span class="example-spacer"></span>
+ 
+  <button mat-raised-button color="warn" (click)="openDialog()">Add Student</button>
+</mat-toolbar>
+<table class="table">
+  <thead>
+    <tr>   
+      <th scope="col">Id</th>
+      <th scope="col">student Name</th>
+      <th scope="col">student father name</th>
+      <th scope="col">student Class</th>
+      <th scope="col">student Address</th>
+      <th scope="col">student Mobile</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of students" >
+      <td>{{ student.studentId }}</td>
+      <td>{{ student.studentName }}</td>
+      <td>{{ student.fatherName }}</td>
+      <td>{{ student.studentClass }}</td>
+      <td>{{ student.studentAddress }}</td>
+      <td>{{ student.studentMobile }}</td>
+      <td><input type="submit"  name="submit_edit" value="Edit" (click)="editProduct(student)" ></td>
+      <td><input type="submit"  name="submit_edit" value="Delete" (click)="deleteStudents(student.studentId)"/></td>
+ 
+    </tr>
+    
+  </tbody>
+</table>
+<router-outlet></router-outlet>
